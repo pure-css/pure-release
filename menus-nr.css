@@ -1,9 +1,12 @@
 /*!
-Pure v0.1.0
+Pure v0.2.0
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
+/*csslint adjoining-classes:false, outline-none:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 .pure-menu ul {
     position: absolute;
     visibility: hidden;
@@ -32,9 +35,14 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     visibility: visible;
 }
 
+.pure-menu-open > ul:focus {
+    outline: 0;
+}
+
 .pure-menu li { position: relative; }
 
-.pure-menu a, .pure-menu .pure-menu-heading {
+.pure-menu a,
+.pure-menu .pure-menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -45,16 +53,17 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
-    margin: 0;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
+    margin: 0;
     vertical-align: middle;
 }
 .pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
+    height: 2.4em;
 }
 
 .pure-menu li a { padding: 5px 20px; }
@@ -62,13 +71,14 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
     float: right;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
+    /* These specific fonts have the Unicode char we need. */
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
     margin-right: -20px;
     margin-top: -1px;
 }
 
 .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 .pure-menu-separator {
@@ -80,13 +90,15 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     overflow: hidden;
 }
 
-.pure-menu-hidden { display: none; }
+.pure-menu-hidden {
+    display: none;
+}
 
 /* FIXED MENU */
 .pure-menu-fixed {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -96,12 +108,12 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal li {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
 }
 
-/* Submenus should still be display:block; */
+/* Submenus should still be display: block; */
 .pure-menu-horizontal li li {
     display: block;
 }
@@ -112,23 +124,40 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
+/* Adjusting separator for vertical menus */
+.pure-menu-horizontal li.pure-menu-separator {
+	height: 50%;
+	width: 1px;
+	margin: 0 7px;
+}
+
+/* Submenus should be horizontal separator again */
+.pure-menu-horizontal li li.pure-menu-separator {
+	height: 1px;
+	width: auto;
+	margin: 7px 2px;
+}
+
+
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
 
 /* MAIN MENU STYLING */
 
 .pure-menu.pure-menu-open,
 .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #ffffff; /* Old browsers */
+    background: #fff; /* Old browsers */
     border: 1px solid #b7b7b7;
 }
 
 /* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal, .pure-menu.pure-menu-horizontal .pure-menu-heading {
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
     border: none;
 }
-
 
 
 /* LINK STYLES */
@@ -149,15 +178,20 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     color: #fff;
 }
 
+/* Focus style for a dropdown menu-item when the parent has been opened */
+.pure-menu .pure-menu-open {
+    background: #dedede;
+}
 
 
-/* HOVER STATES */
-.pure-menu li a:hover {
+.pure-menu li a:hover,
+.pure-menu li a:focus {
     background: #eee;
 }
 
 /* DISABLED STATES */
-.pure-menu li.pure-menu-disabled a:hover {
+.pure-menu li.pure-menu-disabled a:hover,
+.pure-menu li.pure-menu-disabled a:focus {
     background: #fff;
     color: #bfbfbf;
 }
@@ -177,8 +211,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-menu .pure-menu-heading {
     color: #565d64;
     text-transform: uppercase;
-    font-size:90%;
-    margin-top:0.5em;
+    font-size: 90%;
+    margin-top: 0.5em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #dfdfdf;
@@ -195,6 +229,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     border-bottom: 1px solid #b7b7b7;
 }
 
+/*csslint box-model:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 .pure-paginator {
     list-style: none;
     margin: 0;
@@ -203,8 +240,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-paginator li {
     display: inline-block;
     *display: inline;
-    /* IE 7 inline-block hack */
-    *zoom: 1;
+    zoom: 1;
     margin: 0 -0.35em 0 0;
 }
 .pure-paginator .pure-button {
@@ -216,9 +252,10 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-paginator .pure-button:focus {
     outline-style: none;
 }
-.pure-paginator .prev, .pure-paginator .next {
+.pure-paginator .prev,
+.pure-paginator .next {
     color: #C0C1C3;
-    text-shadow: 0px -1px 0px rgba(0,0,0, 0.45);
+    text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
 }
 .pure-paginator .prev {
     border-radius: 2px 0 0 2px;

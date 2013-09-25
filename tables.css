@@ -1,5 +1,5 @@
 /*!
-Pure v0.1.0
+Pure v0.2.0
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -8,14 +8,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 normalize.css v1.1.2 | MIT License | git.io/normalize
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
-/*
-* CSS TABLES
-* ==========
-* Simple CSS for HTML Tables
-* Author: tilomitra
-*/
-
-/* foundational CSS */
 .pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
     border-collapse: collapse;
@@ -56,7 +48,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 /*
 striping:
    even - #fff (white)
-   odd  - #edf5ff (light blue)
+   odd  - #f2f2f2 (light gray)
 */
 .pure-table td {
     background-color: transparent;
@@ -72,7 +64,7 @@ striping:
 
 /* BORDERED TABLES */
 .pure-table-bordered td {
-    border-bottom:1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
 }
 .pure-table-bordered tbody > tr:last-child td,
 .pure-table-horizontal tbody > tr:last-child td {
@@ -85,7 +77,7 @@ striping:
 .pure-table-horizontal td,
 .pure-table-horizontal th {
     border-width: 0 0 1px 0;
-    border-bottom:1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
 }
 .pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;

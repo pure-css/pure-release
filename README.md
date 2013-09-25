@@ -6,14 +6,17 @@ Pure
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
+[![Build Status](https://travis-ci.org/yui/pure.png?branch=master)][Build Status]
+
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
 ```
 
 
 [Pure]: http://purecss.io/
+[Build Status]: https://travis-ci.org/yui/pure
 
 
 Features
@@ -59,7 +62,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
 ```
 
 
@@ -67,7 +70,7 @@ Build From Source
 -----------------
 
 Optionally, you can build Pure from its source on Github. To do this, you'll
-need to have NodeJS and npm installed. We use Grunt to build Pure.
+need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
 $ git clone git@github.com:yui/pure.git
@@ -76,9 +79,14 @@ $ npm install
 $ grunt
 ```
 
+### Build Files
+
 Now, all Pure CSS files should be built into the `pure/build/` directory. All
 files that are in this build directory are also available on the CDN. The naming
 conventions of the files in the `build/` directory follow these rules:
+
+* `[module]-core.css`: The minimal set of styles, ususally structural, that
+  provide the base on which the rest of the module's styles build.
 
 * `[module]-nr.css`: Rollup of `[module]-core.css` + `[module].css` +
   `[module]-[feature].css` from the `src/[module]/` dir. This is the
@@ -95,25 +103,39 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
   non-responsive roll-up of everything.
 
-### Building Specific Modules
 
-You can build a specific module by passing in its name into Grunt:
-
-```shell
-$ grunt grids
-```
+[Grunt]: http://gruntjs.com/
 
 
-Contributions and Code Standards
---------------------------------
+Browser Support and Testing
+---------------------------
 
-Feel free to file bugs and submit pull requests on Github! When submitting a
-pull request, please checkout a new feature branch, and submit your pull request
-from it. Please do not submit pull requests from your `master` branch.
+Pure is tested and works in:
 
-### Versioning
+* IE 7+
+* Latest Stable: Firefox, Chrome, Safari
+* iOS 6.x
+* Android 4.x
 
-Pure adheres to [Semantic Versioning 2.0](http://semver.org/).
+
+Docs and Website
+----------------
+
+[Pure's website][Pure] is also open source, so please open any issues or pull
+requests for the docs and website over at the [`pure-site`][pure-site]
+repository.
+
+
+[pure-site]: https://github.com/yui/pure-site
+
+
+Contributing
+------------
+
+See the [CONTRIBUTING file][] for information on how to contribute to Pure.
+
+
+[CONTRIBUTING file]: https://github.com/yui/pure/blob/master/CONTRIBUTING.md
 
 
 License
@@ -121,5 +143,6 @@ License
 
 This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
+
 
 [LICENSE file]: https://github.com/yui/pure/blob/master/LICENSE.md
