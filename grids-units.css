@@ -1,5 +1,5 @@
 /*!
-Pure v0.2.0
+Pure v0.2.1
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -42,7 +42,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 .pure-u-1 {
-    display: block;
+    width: 100%;
 }
 
 .pure-u-1-2 {
@@ -82,7 +82,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 .pure-u-1-6 {
-    width: 16.656%;
+    width: 16.666%;
 }
 
 .pure-u-5-6 {

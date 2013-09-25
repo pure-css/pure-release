@@ -11,12 +11,15 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
 ```
+
+Alternatively, you can [customize how you use Pure][customize].
 
 
 [Pure]: http://purecss.io/
 [Build Status]: https://travis-ci.org/yui/pure
+[customize]: http://purecss.io/customize/
 
 
 Features
@@ -45,7 +48,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder][].
 
-* Extremely small file size: **4.8KB minified + gzip**.
+* Extremely small file size: **4.2KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
@@ -62,7 +65,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
 ```
 
 
