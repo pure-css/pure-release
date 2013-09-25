@@ -1,5 +1,5 @@
 /*!
-Pure v0.3.0-rc-2
+Pure v0.3.0-rc-3
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -34,7 +34,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
 }
 
 .pure-form input[type="text"]:focus,
