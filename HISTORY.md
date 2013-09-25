@@ -1,6 +1,89 @@
 Pure Change History
 ===================
 
+NEXT
+----
+
+* (!) Pure now requires the Base module (which is Normalize.css) to be on the
+  page. Pure has essentially always required the styles provided by
+  Normalize.css via the Base module, and this now makes it a firm requirement.
+  The `pure-min.css` and `pure-nr-min.css` rollup files already include the Base
+  module.
+
+  **Note:** When using a [custom subset][Customize] of Pure, be sure to include
+  the Base module.
+
+* Added non-minified rollup files: `pure.css` and `pure-nr.css`. These files are
+  created in addition to the minified rollups: `pure-min.css` and
+  `pure-nr-min.css`. The minified rollups _should_ be used in production.
+  ([#171][] @omeid)
+
+### Base
+
+* (!) Removed Normalize.css from checked-in `src/`. Bower is now used to
+  programmatically import Normalize.css into `bower_components/` if it's not
+  already installed. ([#160][])
+
+### Buttons
+
+* Removed `-webkit-font-smoothing: antialiased` rule from Buttons. Pure should not
+  dictate sub-pixel font rendering, that should be left to the person's browser
+  settings and/or the developer. ([#170][] @dchest)
+
+### Forms
+
+* (!) Removed `forms-core.css`. This was a copy of Normalize.css' form related
+  styles. Now that Pure requires the Base module (which is Normalize.css) to be
+  on the page, the Forms Core submodule is no longer needed. ([#160][])
+
+* Added `:focus` styles to `[readonly]` `<input>` elements. ([#143][])
+
+### Grids
+
+* Prevented grid units from falling to a new line on IE6 and IE7. Grid units now
+  have a separate `*width` value for oldIEs. This value is `0.005%` less than
+  the standard `width` value. This fix does not affect modern browsers. ([#154][])
+
+
+* Added a `height: auto` rule to images within a `.pure-g-r` so that their aspect
+  ratios are maintained when the page is resized. ([#172][]: @dchest)
+
+* (!) Added the following font stack to `.pure-g, .pure-g-r` in order to prevent
+  grids from breaking in various target environments:
+
+  ```css
+  font-family: "Bitstream Charter", Tinos, "Droid Sans", "DejaVu Sans",
+                Helvetica, Arial, sans-serif;
+  ```
+
+  This is a *breaking* change. If you are using any non-default font in your project,
+  you will need to modify your CSS and add a `font-family` to the grid unit classes:
+
+  ```css
+  .pure-g [class *= "pure-u"],
+  .pure-g-r [class *= "pure-u"] {
+
+    /* Add your font in here, whether it's a custom font or a normal font */
+    font-family: "Times New Roman", serif;
+
+  }
+  ```
+
+  Refer to the [Grids Documentation][Grids] for more details on using
+  non-default fonts with Pure Grids.
+  ([#41][] @dannyfritz, @pandeiro, and many others!)
+
+
+[#41]: https://github.com/yui/pure/issues/41
+[#143]: https://github.com/yui/pure/issues/143
+[#154]: https://github.com/yui/pure/issues/154
+[#160]: https://github.com/yui/pure/issues/160
+[#170]: https://github.com/yui/pure/issues/170
+[#171]: https://github.com/yui/pure/issues/171
+[Customize]: http://purecss.io/customize/
+[Grids]: http://purecss.io/grids/
+
+
 0.2.1 (2013-07-17)
 ------------------
 
@@ -55,6 +138,7 @@ Pure Change History
 [#109]: https://github.com/yui/pure/issues/109
 [#115]: https://github.com/yui/pure/issues/115
 [#127]: https://github.com/yui/pure/issues/127
+[#172]: https://github.com/yui/pure/pull/172
 
 
 0.2.0 (2013-06-11)

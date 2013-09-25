@@ -48,7 +48,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder][].
 
-* Extremely small file size: **4.2KB minified + gzip**.
+* Extremely small file size: **4.3KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
@@ -100,11 +100,17 @@ conventions of the files in the `build/` directory follow these rules:
 
 * `*-min.css`: A minified file version of the files of the same name.
 
-* `pure-min.css`: A rollup of all `[module]-min.css` files in the `build/` dir.
-  This is a responsive roll-up of everything.
+* `pure.css`: A rollup of all `[module].css` files in the `build/` dir. This is
+  a responsive roll-up of everything, non-minified.
 
-* `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
-  non-responsive roll-up of everything.
+* `pure-min.css`: Minified version of `pure.css` that should be used in
+  production.
+
+* `pure-nr.css`: A Rollup of all modules without @media queries. This is a
+  non-responsive roll-up of everything, non-minified.
+
+* `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
+  production.
 
 
 [Grunt]: http://gruntjs.com/

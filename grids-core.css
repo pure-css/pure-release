@@ -1,14 +1,39 @@
 /*!
-Pure v0.2.1
+Pure v0.3.0-rc-1
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
+/*csslint regex-selectors:false*/
+
 .pure-g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+    /*
+    Sets the font stack to fonts known to work properly with the above
+    letter and word spacings.
+    See https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grid work on all known environments.
+
+    * "Bitstream Charter": Chromebook Pixel running Ubuntu 13.04.
+
+    * Tinos: Chromebook Pixel running Chrome OS. Tinos has to be defined
+    before `Helvetica, Arial` to get picked up by the browser, even though
+    Helvetica or Arial isn't available in that environment.
+
+    * "Droid Sans": Arch Linux with Chromium 29.x.
+
+    * "DejaVu Sans": A common font available on Ubuntu and other environments
+    that acts as a nice fallback
+
+    * Helvetica, Arial, sans-serif: Common font stack on OSX and Windows.
+
+    */
+    font-family: "Bitstream Charter", Tinos, "Droid Sans", "DejaVu Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -28,4 +53,12 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.pure-g [class *= "pure-u"] {
+    font-family: sans-serif;
 }
