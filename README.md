@@ -11,13 +11,20 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.0/pure-min.css">
 ```
 
-Alternatively, you can [customize how you use Pure][customize].
+Note: You can [customize which Pure modules you need][customize].
+
+**Install with Bower:**
+
+```shell
+$ bower install --save pure
+```
 
 
 [Pure]: http://purecss.io/
+[Bower]: http://bower.io/
 [Build Status]: https://travis-ci.org/yui/pure
 [customize]: http://purecss.io/customize/
 
@@ -48,7 +55,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder][].
 
-* Extremely small file size: **4.3KB minified + gzip**.
+* Extremely small file size: **4.4KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
@@ -65,7 +72,13 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.0/pure-min.css">
+```
+
+You can also install Pure using [Bower][], using the following command:
+
+```shell
+$ bower install --save pure
 ```
 
 
@@ -123,7 +136,7 @@ Pure is tested and works in:
 
 * IE 7+
 * Latest Stable: Firefox, Chrome, Safari
-* iOS 6.x
+* iOS 6.x, 7.x
 * Android 4.x
 
 

@@ -1,6 +1,6 @@
 /*!
-Pure v0.3.0
-Copyright 2013 Yahoo! Inc. All rights reserved.
+Pure v0.4.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
@@ -63,7 +63,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     *display: inline;
     zoom: 1;
     vertical-align: middle;
-    height: 2.4em;
 }
 
 .pure-menu li a { padding: 5px 20px; }

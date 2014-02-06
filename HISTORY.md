@@ -1,6 +1,74 @@
 Pure Change History
 ===================
 
+0.4.0 (2014-02-06)
+------------------
+
+### Base
+
+* Elements that have Pure classnames which set a `display` declaration _and_ use
+  the `hidden` HTML attribute will now properly be hidden. With these changes,
+  the following button will be hidden from view:
+
+    ```html
+    <button class="pure-button" hidden>No showy</button>
+    ```
+
+  A new rule for the `[hidden]` selector has been added with the declaration:
+  `display: none !important;`. This is a time where it's appropriate for a
+  project like Pure to use `!important`. ([#177][])
+
+### Buttons
+
+* Removed all the occurrences of `-ms-linear-gradient()` from Buttons since it
+  has never been in the final version of IE 10. ([#200][]: @AurelioDeRosa)
+
+* `<input>` Buttons now have the same height as non-input buttons.
+  `font-family: inherit;` has been added to the `.pure-button` selector to
+  normalize the difference in height. ([#221][] @narcis-radu)
+
+* Buttons now have visually uniform default `padding` on all four sides. The
+  left/right padding is 2x the top/bottom padding. ([#191][] @achalv)
+
+### Forms
+
+* Added `vertical-align: top;` to `<textarea>`s within `.pure-form-aligned`
+  Forms to fix an alignment issue where its label was aligned to the middle.
+  ([#174][] @rictorres, @ItsAsbreuk)
+
+* Added styling for `<input>` elements that don't have a `type` attribute.
+  ([#261][] @dougdavies)
+
+### Grids
+
+* Added all non-reduced fractions to Grids default 5ths- and 24ths-based units.
+  There are now styles specified for `.pure-u-1-24` – `.pure-u-24-24`. All 5ths-
+  based units and reduced factions still remain; e.g., both `.pure-u-12-24` and
+  `.pure-u-1-2` exist. ([#144][] @mike-engel)
+
+* Removed `grids-units.css` from `src/`, this file is now generated via a Grunt
+  task. The units generation is done via the new
+  [`rework-pure-grids`][rework-pure-grids] [Rework][] plugin, and it can be used
+  to create any custom nth-based units for Pure's Grids system.
+
+### Menus
+
+* Removed hard-coded height for horizontal menus. ([#164][])
+
+
+[#144]: https://github.com/yui/pure/issues/144
+[#164]: https://github.com/yui/pure/issues/164
+[#174]: https://github.com/yui/pure/issues/174
+[#177]: https://github.com/yui/pure/issues/177
+[#191]: https://github.com/yui/pure/issues/191
+[#200]: https://github.com/yui/pure/issues/200
+[#221]: https://github.com/yui/pure/issues/221
+[#261]: https://github.com/yui/pure/issues/261
+
+[rework-pure-grids]: https://github.com/ericf/rework-pure-grids
+[Rework]: https://github.com/visionmedia/rework
+
+
 0.3.0 (2013-09-09)
 ------------------
 
