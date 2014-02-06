@@ -1,7 +1,13 @@
 Pure Change History
 ===================
 
-0.4.0 (2014-02-06)
+NEXT
+----
+
+
+
+
+0.4.1 (2014-02-06)
 ------------------
 
 ### Base
@@ -67,6 +73,12 @@ Pure Change History
 
 [rework-pure-grids]: https://github.com/ericf/rework-pure-grids
 [Rework]: https://github.com/visionmedia/rework
+
+
+0.4.0 (2014-02-06)
+------------------
+
+* __[!]__ Corrupted release build, use `0.4.1`.
 
 
 0.3.0 (2013-09-09)
