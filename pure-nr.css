@@ -1,5 +1,5 @@
 /*!
-Pure v0.4.1
+Pure v0.4.2
 Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -945,7 +945,6 @@ a.pure-button-selected {
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    font-size: 0.8em;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
@@ -961,12 +960,18 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    font-size: 0.8em;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
 }
 
 
@@ -1055,7 +1060,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
     color: #b94a48;
-    border: 1px solid #ee5f5b;
+    border-color: #ee5f5b;
 }
 .pure-form input:focus:invalid:focus,
 .pure-form textarea:focus:invalid:focus,
@@ -1076,7 +1081,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 .pure-form label {
     margin: 0.5em 0 0.2em;
-    font-size: 90%;
 }
 .pure-form fieldset {
     margin: 0;
@@ -1088,7 +1092,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     width: 100%;
     padding: 0.3em 0;
     margin-bottom: 0.3em;
-    font-size: 125%;
     color: #333;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -1210,14 +1213,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding-left: 0.3em;
     color: #666;
     vertical-align: middle;
-    font-size: 90%;
+    font-size: 0.875em;
 }
 
 /* Block help for forms */
 .pure-form-message {
     display: block;
     color: #666;
-    font-size: 90%;
+    font-size: 0.875em;
 }
 
 /*csslint adjoining-classes:false, outline-none:false*/
