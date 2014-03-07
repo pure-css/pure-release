@@ -1,5 +1,5 @@
 /*!
-Pure v0.4.2
+Pure v0.5.0-rc-1
 Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -26,7 +26,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     font-size: inherit;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
-    padding: 6px 12px; /* cell padding */
+    padding: 0.5em 1em; /* cell padding */
 }
 .pure-table td:first-child,
 .pure-table th:first-child {
