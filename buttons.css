@@ -1,17 +1,16 @@
 /*!
-Pure v0.5.0
+Pure v0.6.0-rc-1
 Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
+https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
 .pure-button {
     /* Structure */
     display: inline-block;
-    *display: inline; /*IE 6/7*/
     zoom: 1;
     line-height: normal;
     white-space: nowrap;
-    vertical-align: baseline;
+    vertical-align: middle;
     text-align: center;
     cursor: pointer;
     -webkit-user-drag: none;
@@ -19,6 +18,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -32,12 +34,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-button {
     font-family: inherit;
     font-size: 100%;
-    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
-    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
     padding: 0.5em 1em;
     color: #444; /* rgba not supported (IE 8) */
     color: rgba(0, 0, 0, 0.80); /* rgba supported */
-    *color: #444; /* IE 6 & 7 */
     border: 1px solid #999;  /*IE 6/7/8*/
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
     background-color: #E6E6E6;
@@ -61,6 +60,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-button-active,
 .pure-button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000\9;
 }
 
 .pure-button[disabled],

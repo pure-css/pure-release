@@ -1,12 +1,13 @@
 Pure
 ====
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/yahoo/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Pure](http://f.cl.ly/items/2y0M0E2Q3a2H0z1N1Y19/pure-banner.png)][Pure]
+[![Pure](https://cloud.githubusercontent.com/assets/449779/5291099/1b554cca-7b03-11e4-9157-53a12d91b34a.png)][Pure]
 
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
-[![Build Status](https://travis-ci.org/yui/pure.png?branch=master)][Build Status]
+[![Build Status](http://img.shields.io/travis/yahoo/pure.svg?style=flat)][Build Status]
 
 **Use From the CDN:**
 
@@ -25,7 +26,7 @@ $ bower install --save pure
 
 [Pure]: http://purecss.io/
 [Bower]: http://bower.io/
-[Build Status]: https://travis-ci.org/yui/pure
+[Build Status]: https://travis-ci.org/yahoo/pure
 [customize]: http://purecss.io/customize/
 
 
@@ -89,7 +90,7 @@ Optionally, you can build Pure from its source on Github. To do this, you'll
 need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
-$ git clone git@github.com:yui/pure.git
+$ git clone git@github.com:yahoo/pure.git
 $ cd pure
 $ npm install
 $ grunt
@@ -125,6 +126,12 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
   production.
 
+* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which 
+  includes @media queries.
+
+* `grids-responsive-min.css`: Minified version of `grids-responsive.css` that
+  should be used in production.
+
 
 [Grunt]: http://gruntjs.com/
 
@@ -134,9 +141,9 @@ Browser Support and Testing
 
 Pure is tested and works in:
 
-* IE 7+
+* IE 8+
 * Latest Stable: Firefox, Chrome, Safari
-* iOS 6.x, 7.x
+* iOS 6-8
 * Android 4.x
 
 
@@ -148,7 +155,7 @@ requests for the docs and website over at the [`pure-site`][pure-site]
 repository.
 
 
-[pure-site]: https://github.com/yui/pure-site
+[pure-site]: https://github.com/yahoo/pure-site
 
 
 Contributing
@@ -157,7 +164,7 @@ Contributing
 See the [CONTRIBUTING file][] for information on how to contribute to Pure.
 
 
-[CONTRIBUTING file]: https://github.com/yui/pure/blob/master/CONTRIBUTING.md
+[CONTRIBUTING file]: https://github.com/yahoo/pure/blob/master/CONTRIBUTING.md
 
 
 License
@@ -167,4 +174,4 @@ This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
 
 
-[LICENSE file]: https://github.com/yui/pure/blob/master/LICENSE.md
+[LICENSE file]: https://github.com/yahoo/pure/blob/master/LICENSE.md
