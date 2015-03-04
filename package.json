@@ -1,0 +1,40 @@
+{
+  "name": "purecss",
+  "version": "0.6.0-test-1",
+  "description": "Release directory of Pure for NPM package.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahoo/pure-release.git"
+  },
+  "keywords": [
+    "pure",
+    "css",
+    "purecss",
+    "yahoo"
+  ],
+  "author": "Yahoo Presentation Technologies (YPT) Team",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/yahoo/pure-release/issues"
+  },
+  "homepage": "https://github.com/yahoo/pure-release",
+  "scripts": {},
+  "_shasum": "0cd961de143e5c9e505638b7cbb8698806ca2ab1",
+  "_from": "purecss@",
+  "_npmVersion": "1.4.21",
+  "_npmUser": {
+    "name": "jamesalley",
+    "email": "manalagi001@yahoo.com"
+  },
+  "maintainers": [
+    "jamesalley <manalagi001@yahoo.com>",
+    "undozen <opensource@undozen.com>"
+  ],
+  "dist": {
+    "shasum": "0cd961de143e5c9e505638b7cbb8698806ca2ab1",
+    "tarball": "http://registry.npmjs.org/purecss/-/purecss-0.6.0-test-1.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/purecss/-/purecss-0.6.0-test-1.tgz",
+  "main": "index.js"
+}
