@@ -1,6 +1,6 @@
 /*!
-Pure v0.6.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
+Pure v0.6.1
+Copyright 2013 Yahoo!
 Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
@@ -15,11 +15,9 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     cursor: pointer;
     -webkit-user-drag: none;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     box-sizing: border-box;
 }
 

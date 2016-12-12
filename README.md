@@ -12,7 +12,7 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
 ```
 
 Note: You can [customize which Pure modules you need][customize].
@@ -23,6 +23,11 @@ Note: You can [customize which Pure modules you need][customize].
 $ bower install --save pure
 ```
 
+**Install with NPM:**
+
+```shell
+$ npm install purecss
+```
 
 [Pure]: http://purecss.io/
 [Bower]: http://bower.io/
@@ -54,26 +59,23 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Responsive by default, with a non-responsive option.
 
-* Easy one-click customization with the [Skin Builder][].
-
 * Extremely small file size: **4.5KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
-[Skin Builder]: http://yui.github.io/skinbuilder/?mode=pure
 
 
 Get Started
 -----------
 
 To get started using Pure, go to the [Pure CSS website][Pure]. The website has
-extensive documentation and examples necessary to get you started using Pure.
+extensive documentation and examples to help you start using Pure.
 
 You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
 ```
 
 You can also install Pure using [Bower][], using the following command:
@@ -82,6 +84,11 @@ You can also install Pure using [Bower][], using the following command:
 $ bower install --save pure
 ```
 
+Or you can install Pure using NPM:
+
+```shell
+$ npm install purecss
+```
 
 Build From Source
 -----------------
@@ -102,7 +109,7 @@ Now, all Pure CSS files should be built into the `pure/build/` directory. All
 files that are in this build directory are also available on the CDN. The naming
 conventions of the files in the `build/` directory follow these rules:
 
-* `[module]-core.css`: The minimal set of styles, ususally structural, that
+* `[module]-core.css`: The minimal set of styles, usually structural, that
   provide the base on which the rest of the module's styles build.
 
 * `[module]-nr.css`: Rollup of `[module]-core.css` + `[module].css` +
@@ -115,7 +122,7 @@ conventions of the files in the `build/` directory follow these rules:
 * `*-min.css`: A minified file version of the files of the same name.
 
 * `pure.css`: A rollup of all `[module].css` files in the `build/` dir. This is
-  a responsive roll-up of everything, non-minified.
+  a responsive roll-up of everything, non-minified.  Note: does not contain responsive grids with @media queries.
 
 * `pure-min.css`: Minified version of `pure.css` that should be used in
   production.
@@ -126,7 +133,7 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
   production.
 
-* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which 
+* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which
   includes @media queries.
 
 * `grids-responsive-min.css`: Minified version of `grids-responsive.css` that

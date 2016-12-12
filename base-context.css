@@ -1,6 +1,6 @@
 /*!
-Pure v0.6.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
+Pure v0.6.1
+Copyright 2013 Yahoo!
 Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
@@ -8,12 +8,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 normalize.css v^3.0 | MIT License | git.io/normalize
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 
 .pure {
@@ -86,7 +86,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 
 .pure [hidden],
@@ -106,7 +106,8 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 
 .pure a:active,
@@ -224,7 +225,6 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
  */
 
 .pure hr {
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     height: 0;
 }
@@ -372,17 +372,14 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
 .pure input[type="search"] {
     -webkit-appearance: textfield;
     /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    /* 2 */
     box-sizing: content-box;
+    /* 2 */
 }
 
 /**
