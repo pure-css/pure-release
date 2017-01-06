@@ -1,6 +1,5 @@
 Pure
 ====
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/yahoo/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Pure](https://cloud.githubusercontent.com/assets/449779/5291099/1b554cca-7b03-11e4-9157-53a12d91b34a.png)][Pure]
 
@@ -8,11 +7,13 @@ A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
 [![Build Status](http://img.shields.io/travis/yahoo/pure.svg?style=flat)][Build Status]
+[![Dependency Status](https://david-dm.org/yahoo/pure/dev-status.svg)](https://david-dm.org/yahoo/pure?type=dev)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/yahoo/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 ```
 
 Note: You can [customize which Pure modules you need][customize].
@@ -75,7 +76,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 ```
 
 You can also install Pure using [Bower][], using the following command:

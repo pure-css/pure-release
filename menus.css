@@ -1,5 +1,5 @@
 /*!
-Pure v0.6.1
+Pure v0.6.2
 Copyright 2013 Yahoo!
 Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
@@ -129,7 +129,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 /* misc default styling */
 
-.pure-menu-separator {
+.pure-menu-separator,
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator {
     background-color: #ccc;
     height: 1px;
     margin: .3em 0;
@@ -139,6 +140,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 1px;
     height: 1.3em;
     margin: 0 .3em ;
+}
+
+/* Need to reset the separator since submenu is vertical */
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator {
+    display: block;
+    width: auto;
 }
 
 .pure-menu-heading {
