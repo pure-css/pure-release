@@ -1,8 +1,8 @@
 /*!
-Pure v1.0.0
+Pure v1.0.1
 Copyright 2013 Yahoo!
 Licensed under the BSD License.
-https://github.com/yahoo/pure/blob/master/LICENSE.md
+https://github.com/pure-css/pure/blob/master/LICENSE.md
 */
 .pure-button {
     /* Structure */
@@ -18,7 +18,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 /* Firefox: Get rid of the inner focus border */

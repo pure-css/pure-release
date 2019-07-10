@@ -1,8 +1,8 @@
 /*!
-Pure v1.0.0
+Pure v1.0.1
 Copyright 2013 Yahoo!
 Licensed under the BSD License.
-https://github.com/yahoo/pure/blob/master/LICENSE.md
+https://github.com/pure-css/pure/blob/master/LICENSE.md
 */
 .pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
@@ -27,13 +27,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 0.5em 1em; /* cell padding */
-}
-
-/* Consider removing this next declaration block, as it causes problems when
-there's a rowspan on the first cell. Case added to the tests. issue#432 */
-.pure-table td:first-child,
-.pure-table th:first-child {
-    border-left-width: 0;
 }
 
 .pure-table thead {
